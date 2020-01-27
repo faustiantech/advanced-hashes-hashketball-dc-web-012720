@@ -1,4 +1,4 @@
-# Write your code here!
+require 'pry'
 
 def game_hash
   
@@ -141,6 +141,11 @@ def game_hash
 end
 
 def num_points_scored(name)
+  test = game_hash[:home].each do |key, value|
+    binding.pry
+  end
+      
+  
   all_players = game_hash[:home][:players] + game_hash[:away][:players]
   i = 0
   while i < all_players.count do
